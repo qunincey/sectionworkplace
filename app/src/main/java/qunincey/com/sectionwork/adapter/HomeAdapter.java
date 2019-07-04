@@ -13,10 +13,11 @@ import java.util.List;
 
 import qunincey.com.sectionwork.R;
 import qunincey.com.sectionwork.bean.NewsBean;
+import qunincey.com.sectionwork.utils.ImageUtils;
 import qunincey.com.sectionwork.utils.URlUtils;
 import qunincey.com.sectionwork.viewholder.NewViewHolder;
 
-public class HomeAdapter extends BaseMultiItemQuickAdapter<NewsBean, NewViewHolder> {
+public class HomeAdapter extends BaseMultiItemQuickAdapter<NewsBean, BaseViewHolder> {
 
     /**
      * Same as QuickAdapter#QuickAdapter(Context,int) but with
@@ -31,12 +32,12 @@ public class HomeAdapter extends BaseMultiItemQuickAdapter<NewsBean, NewViewHold
     }
 
     @Override
-    protected void convert(NewViewHolder helper, NewsBean item) {
+    protected void convert(BaseViewHolder helper, NewsBean item) {
         switch (helper.getItemViewType()) {
             //获取类型后设置数据
             case 1:
                 helper.setText(R.id.textView,item.getNewsName());
-                helper.setText(R.id.textView2,item.getNewsName());
+                helper.setText(R.id.textView2,item.getNewsTypeName());
                 ImageView imageView = helper.getView(R.id.imageView);
                 //加上主路径,获取对象图片，类似的同样
                 Glide.with(helper.itemView.getContext())
@@ -50,12 +51,10 @@ public class HomeAdapter extends BaseMultiItemQuickAdapter<NewsBean, NewViewHold
                 ImageView imageView1 = helper.getView(R.id.imageView);
                 ImageView imageView2 = helper.getView(R.id.imageView2);
                 ImageView imageView3 = helper.getView(R.id.imageView3);
-                Glide.with(helper.itemView.getContext())
-                        .load(URlUtils.IP+item.getImg1()).into(imageView1);
-                Glide.with(helper.itemView.getContext())
-                        .load(URlUtils.IP+item.getImg1()).into(imageView2);
-                Glide.with(helper.itemView.getContext())
-                        .load(URlUtils.IP+item.getImg1()).into(imageView3);
+                ImageUtils.setImage(helper.itemView.getContext(),URlUtils.IP+item.getImg1(),imageView1);
+                ImageUtils.setImage(helper.itemView.getContext(),URlUtils.IP+item.getImg2(),imageView2);
+                ImageUtils.setImage(helper.itemView.getContext(),URlUtils.IP+item.getImg3(),imageView3);
+
                 break;
         }
     }
