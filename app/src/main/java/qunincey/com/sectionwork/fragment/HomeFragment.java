@@ -37,6 +37,7 @@ import okhttp3.ResponseBody;
 import qunincey.com.sectionwork.R;
 
 import qunincey.com.sectionwork.activity.NewsDetailActivity;
+import qunincey.com.sectionwork.activity.PythonActivity;
 import qunincey.com.sectionwork.adapter.HomeAdapter;
 import qunincey.com.sectionwork.bean.NewsBean;
 import qunincey.com.sectionwork.utils.GlideImageLoader;
@@ -120,6 +121,16 @@ public class HomeFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+
+        LinearLayout linearLayout1 = headView.findViewById(R.id.linearLayout1);
+
+        linearLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, PythonActivity.class);
+                startActivity(intent);
             }
         });
 
