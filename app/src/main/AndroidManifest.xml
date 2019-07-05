@@ -27,6 +27,8 @@
     <permission android:name="android.permission.BLUETOOTH" android:label="BLUETOOTH" />
     <permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
+
+
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
