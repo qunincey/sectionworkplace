@@ -12,7 +12,9 @@ import com.nightonke.boommenu.BoomButtons.TextInsideCircleButton;
 import com.nightonke.boommenu.BoomMenuButton;
 
 import qunincey.com.sectionwork.R;
+import qunincey.com.sectionwork.activity.AndroidPieChartActivity;
 import qunincey.com.sectionwork.activity.JavaLineChartActivity;
+import qunincey.com.sectionwork.activity.PHPBarChartActivity;
 
 public class ChartFragment extends BaseFragment {
 
@@ -46,16 +48,16 @@ public class ChartFragment extends BaseFragment {
                         public void onBoomButtonClick(int index) {
                             switch (index){
                                 case 0:
-//                                    Intent intent0 = new Intent(activity,AndroidPieChartActivty.class);
-//                                    startActivity(intent0);
+                                    Intent intent0 = new Intent(activity, AndroidPieChartActivity.class);
+                                    startActivity(intent0);
                                     break;
                                 case 1:
                                     Intent intent1 = new Intent(activity, JavaLineChartActivity.class);
                                     startActivity(intent1);
                                     break;
                                 case 2:
-//                                    Intent intent2 = new Intent(activity,AndroidPieChartActivty.class);
-//                                    startActivity(intent2);
+                                    Intent intent2 = new Intent(activity, PHPBarChartActivity.class);
+                                    startActivity(intent2);
                                     break;
                                 case 3:
 //                                    Intent intent3 = new Intent(activity,AndroidPieChartActivty.class);

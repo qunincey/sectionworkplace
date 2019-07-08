@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout"
+    android:orientation="vertical"
+    android:background="@drawable/count_bg">
+
+    <include layout="@layout/toolbar_1"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart"
+        android:layout_gravity="center"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="100dp"
+        />
+
+</LinearLayout>
