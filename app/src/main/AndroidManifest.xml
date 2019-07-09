@@ -51,6 +51,7 @@
         <activity android:name=".activity.JavaLineChartActivity"/>
         <activity android:name=".activity.PHPBarChartActivity"/>
         <activity android:name=".activity.AndroidPieChartActivity"/>
+        <activity android:name=".activity.VideoDetailActivity"/>
     </application>
 
 </manifest>

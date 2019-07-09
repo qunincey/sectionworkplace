@@ -2,10 +2,9 @@ package qunincey.com.sectionwork.activity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
@@ -16,7 +15,6 @@ import com.just.agentweb.WebChromeClient;
 import com.just.agentweb.WebViewClient;
 
 import qunincey.com.sectionwork.R;
-import qunincey.com.sectionwork.activity.HomeAsUpBaseActivity;
 
 public class NewsDetailActivity extends HomeAsUpBaseActivity {
     private AgentWeb mAgentWeb;
