@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class RegisterActivity extends HomeAsUpBaseActivity {
     private EditText editText;
     private EditText editText2;
     private EditText editText3;
+    private Button button;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,9 +35,18 @@ public class RegisterActivity extends HomeAsUpBaseActivity {
         editText2 = findViewById(R.id.editText2);
         editText3 = findViewById(R.id.editText3);
 
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                register(button);
+            }
+        });
+
     }
 
-    public void login(final View view){
+    public void register(final View view){
         final String userName = editText.getText().toString();
         String password = editText2.getText().toString();
         String emial = editText3.getText().toString();
@@ -53,10 +64,9 @@ public class RegisterActivity extends HomeAsUpBaseActivity {
         }
         //todo
         final User user = new User();
-        user.setUsername("" + System.currentTimeMillis());
-        user.setPassword("" + System.currentTimeMillis());
-//        user.setAge(18);
-//        user.setGender(0);
+        user.setUsername(userName);
+        user.setPassword(password);
+        user.setEmail(emial);
         user.signUp(new SaveListener<User>() {
             @Override
             public void done(User user, BmobException e) {

@@ -20,6 +20,8 @@ import qunincey.com.sectionwork.bean.User;
 
 //todo 复制布局文件2个
 public class LoginActivity extends HomeAsUpBaseActivity {
+
+    private static final int REQUEST_CODE2 =0x2001;
     private EditText editText;
     private EditText editText2;
 
@@ -66,5 +68,34 @@ public class LoginActivity extends HomeAsUpBaseActivity {
                 }
             }
         });
+    }
+
+    public void register(View view){
+        Intent intent = new Intent(this,RegisterActivity.class);
+        startActivityForResult(intent,REQUEST_CODE2);
+
+    }
+
+    public void forgetPassword(View view){
+        Intent intent = new Intent(this,FindPasswordActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode==REQUEST_CODE2){
+
+            if (data!=null){
+                String userName = data.getStringExtra("username");
+                if (!TextUtils.isEmpty(userName)){
+                    editText.setText(userName);
+                    editText.setSelectAllOnFocus(true);
+                    editText2.setText("");
+                }
+            }
+
+        }
     }
 }

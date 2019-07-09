@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/psw_icon"
-                android:hint="请输入账户"
+                android:hint="请输入密码"
                 android:inputType="textPassword"
                 />
 
@@ -71,7 +71,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:onClick="register"
         android:text="注册"
         />
 
