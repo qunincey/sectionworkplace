@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyExpanded" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:color">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="MyCollapsed" parent="TextAppearance.AppCompat.Title">
+        <item name="android:color">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>

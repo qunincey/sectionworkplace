@@ -51,7 +51,18 @@
         <activity android:name=".activity.JavaLineChartActivity"/>
         <activity android:name=".activity.PHPBarChartActivity"/>
         <activity android:name=".activity.AndroidPieChartActivity"/>
-        <activity android:name=".activity.VideoDetailActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.VideoDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.FindPasswordActivity"/>
+
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="qunincey.com.sectionwork.BmobContentProvider">
+        </provider>
     </application>
 
 </manifest>
