@@ -67,6 +67,7 @@ public class RegisterActivity extends HomeAsUpBaseActivity {
         user.setUsername(userName);
         user.setPassword(password);
         user.setEmail(emial);
+        user.setNickName("无").setSex(false).setInfo("null");
         user.signUp(new SaveListener<User>() {
             @Override
             public void done(User user, BmobException e) {

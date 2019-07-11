@@ -10,6 +10,7 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 import de.hdodenhof.circleimageview.CircleImageView;
 import qunincey.com.sectionwork.R;
 import qunincey.com.sectionwork.activity.LoginActivity;
+import qunincey.com.sectionwork.activity.UserInfoActivity;
 
 public class MeFragment extends BaseFragment {
 
@@ -31,6 +32,9 @@ public class MeFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 if(isLogin){
+
+                    Intent userInfo = new Intent(getActivity(), UserInfoActivity.class);
+                    startActivity(userInfo);
 
                 }else{
                     Intent intent =  new Intent(activity, LoginActivity.class);
